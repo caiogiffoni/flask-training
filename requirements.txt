@@ -5,3 +5,4 @@ ipdb
 black
 sqlalchemy
 flask-sqlalchemy
+flask-jwt-extended

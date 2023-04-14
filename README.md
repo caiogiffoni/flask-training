@@ -1,1 +1,10 @@
 # flask-training
+
+build image
+docker build -t flask-smorest-api .
+
+build container
+docker run -d -p 5000:5000 rest-apis-flask-python
+
+build container
+docker run -dp 5000:5000 -w /app -v "$(pwd):/app" flask-smorest-api
