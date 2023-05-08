@@ -24,6 +24,7 @@ class Item(MethodView):
     @jwt_required()
     def delete(self, item_id):
         jwt = get_jwt()
+        # only adm route
         if not jwt.get("is_admin"): 
             abort(401, message="Admin privilege required.")
         item = ItemModel.query.get_or_404(item_id)
